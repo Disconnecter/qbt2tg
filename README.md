@@ -1,5 +1,7 @@
 # qbt2tg — Telegram Bot for qBittorrent
 
+🤖  **CHATGPT DRIVEN PROJECT**
+
 **qbt2tg** is a modular Telegram bot that lets you manage your qBittorrent downloads directly from Telegram.
 Upload `.torrent` files, choose categories, list and delete torrents, get notifications on completion, and enjoy smart torrent name sanitizing—all from chat!
 
