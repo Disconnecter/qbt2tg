@@ -1,0 +1,28 @@
+
+\.(mkv|mp4|avi|mov|ts|wmv|flv|webm)$
+
+[\.\-\s_]+(720|1080|2160|4320|576|480)p[\.\-\s_]*
+
+\((1080p|1080р|720p|720р|2160p|2160р|4320p|4320р|576p|576р|480p|480р)\)
+\(\d{3,4}[pр]\)
+
+[\.\-\s_]+(HDR|SDR|WEB[\.\-\s_]?DL|WEB[\.\-\s_]?Rip|WEBRip|BDRip|BluRay|Remux|DVDRip|HDTV|CAM|TS|TC|SATRip|DVDScr|WEB|DLRip)[\.\-\s_]+
+
+\b(AAC|DDP|EAC3|DTS|AC3|TrueHD)[\s\.\-]*[0-9]+[\.\-][0-9]+\b
+\b(AAC|DDP|EAC3|DTS|AC3|TrueHD)[\s\.\-]*[0-9]+[\s][0-9]+\b
+
+\b(Flux|H\.264)+\b
+
+[\.\-\s_]+(FLUX|MVO|DDP5[\.\-_\s]*[0-9\.]*|Atmos|AAC|EAC3|H[\.\-_\s]*264|H[\.\-_\s]*265|HEVC|x264|x265|AVC|MP3|DTS|TrueHD|Dolby|Vision|HDR\.265|HDR10|HDR10\+|DolbyVision|RGB)[\.\-\s_]*
+
+[\.\-\s_]+(RUTOR|RGzsRutracker|New[\.\-\s_]?Team|NovaMedia|EniaHD|LF|Hqh|Master5|RGB|RUS|TEAM|Group|LostFilm|Kinozal|Rutor|HDRezka|Baibako|Amedia|AlexFilm|Netflix|AMZN|AMAZON|WEB-DLRip|media|trailer|fanart|sample|subs|RusEng|Rus|Eng|PROPER|REPACK|EXTENDED|UNRATED|COMPLETE|SUBBED|DUBBED|LIMITED|IMAX|UNCUT|Theatrical|SpecialEdition|MULTI|INTERNAL|READNFO|REMUX)[\.\-\s_]+
+\b(LF|Hqh|Master5|RGB|EniaHD|RGzsRutracker|ATVP|NF)\b
+\b(New|от|HDR|Rutor|SDR|MVO|Atmos|DlRip|Web|Novamedia)\b
+
+
+\((WEB|DL|DLRip|BDRip|HDRip|WEBRip|BluRay|HDTV|CAM|HDR|SDR|TS|TC|SATRip|DVDScr|Remux|AMZN|AMAZON|NF|Netflix|AAC\.2\.0|FLUX|MVO|Atmos|H\.264|x264|x265|HEVC|DTS|TrueHD|Dolby|Vision|HDR10|DolbyVision|RUS|ENG|SUBBED|DUBBED|PROPER|REPACK|COMPLETE|INTERNAL|MULTI|REMUX|READNFO|RUTOR|LostFilm|Kinozal|Amedia|AlexFilm|Baibako|EniaHD|NovaMedia|New[-_ ]?Team|HDRezka|RGzsRutracker|GROUP|TEAM)\)
+\[(WEB|DL|DLRip|BDRip|HDRip|WEBRip|BluRay|HDTV|CAM|HDR|SDR|TS|TC|SATRip|DVDScr|Remux|AMZN|AMAZON|NF|Netflix|AAC\.2\.0|FLUX|MVO|Atmos|H\.264|x264|x265|HEVC|DTS|TrueHD|Dolby|Vision|HDR10|DolbyVision|RUS|ENG|SUBBED|DUBBED|PROPER|REPACK|COMPLETE|INTERNAL|MULTI|REMUX|READNFO|RUTOR|LostFilm|Kinozal|Amedia|AlexFilm|Baibako|EniaHD|NovaMedia|New[-_ ]?Team|HDRezka|RGzsRutracker|GROUP|TEAM)\]
+
+\(\s*\)
+\[\s*\]
+\{\s*\}
