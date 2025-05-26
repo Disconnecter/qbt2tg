@@ -35,21 +35,23 @@ pip install python-telegram-bot requests apscheduler
 
 ### Setup:
 
-	1.	Clone this repo and enter the folder.
-	2. Rename `config_sample.py.` to `config.py`.
-	3.	Edit config.py with your tokens, qBittorrent host, user, and password.
-		```
-		  # config.py
-				TELEGRAM_TOKEN = 'token'
-				QBITTORRENT_URL = 'http://localhost:8080'
-				QBITTORRENT_USERNAME = 'user'
-				QBITTORRENT_PASSWORD = 'pass'
-				NOTIFY_CHAT_ID = 1
-				CHECK_COMPLETED_INTERVAL = 60
-				NOTIFIED_FILE = "notified.txt"
-		```
-	4.	Edit sanitize_rules.txt if you want to adjust how names are cleaned up (see next section).
-	5.	Start the bot:
-	```sh
-	python3 bot.py
-	```
+1. Clone this repo and enter the folder.
+2. Rename `config_sample.py.` to `config.py`.
+3. Edit config.py with your tokens, qBittorrent host, user, and password.
+
+```sh
+# config.py
+TELEGRAM_TOKEN = 'token'
+QBITTORRENT_URL = 'http://localhost:8080'
+QBITTORRENT_USERNAME = 'user'
+QBITTORRENT_PASSWORD = 'pass'
+NOTIFY_CHAT_ID = 1
+CHECK_COMPLETED_INTERVAL = 60
+NOTIFIED_FILE = "notified.txt"
+```
+
+4. Edit sanitize_rules.txt if you want to adjust how names are cleaned up (see next section).
+5. Start the bot:
+```sh
+python3 bot.py
+```
