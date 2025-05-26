@@ -2,6 +2,7 @@ import os
 import glob
 import shutil
 import re
+import config
 
 def clean_nfo_and_delete_folder(folder):
     if folder and os.path.isdir(folder):
@@ -15,7 +16,7 @@ def clean_nfo_and_delete_folder(folder):
         except Exception:
             pass
 
-def load_sanitize_rules(filepath="sanitize_rules.txt"):
+def load_sanitize_rules(filepath=config.SANITIZE_FILE):
     rules = []
     if os.path.exists(filepath):
         with open(filepath, "r") as f:
