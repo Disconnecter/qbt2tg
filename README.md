@@ -48,6 +48,7 @@ QBITTORRENT_PASSWORD = 'pass'
 NOTIFY_CHAT_ID = 1
 CHECK_COMPLETED_INTERVAL = 60
 NOTIFIED_FILE = "notified.txt"
+SANITIZE_FILE = "sanitize_rules.txt"
 ```
 
 4. Edit `sanitize_rules.txt` if you want to adjust how names are cleaned up.
