@@ -37,15 +37,16 @@ async def handle_main_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def handle_buttons(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
-    await query.answer()
     data = query.data
     if data.startswith('del_'):
+        await query.answer()
         from .torrent_ops import del_torrent
         hash_ = data[4:]
         await del_torrent(update, context, hash_)
     elif data.startswith('cat_'):
+        await query.answer()
         from .file_upload import handle_category_choice
         category = data[4:]
         await handle_category_choice(update, context, category)
     else:
-        await query.answer()
+        await query.answer("Unknown action")

@@ -4,6 +4,8 @@ import shutil
 import re
 import config
 
+_SANITIZE_RULES = None
+
 def clean_nfo_and_delete_folder(folder):
     if folder and os.path.isdir(folder):
         for nfo_file in glob.glob(os.path.join(folder, '**', '*.nfo'), recursive=True):
@@ -26,9 +28,14 @@ def load_sanitize_rules(filepath=config.SANITIZE_FILE):
                     rules.append(line)
     return rules
 
+def get_sanitize_rules():
+    global _SANITIZE_RULES
+    if _SANITIZE_RULES is None:
+        _SANITIZE_RULES = load_sanitize_rules()
+    return _SANITIZE_RULES
+
 def sanitize_torrent_name(name):
-    rules = load_sanitize_rules()
-    for pattern in rules:
+    for pattern in get_sanitize_rules():
         try:
             name = re.sub(pattern, ' ', name, flags=re.IGNORECASE)
         except re.error as e:

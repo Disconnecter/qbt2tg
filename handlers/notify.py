@@ -7,7 +7,6 @@ from utils import sanitize_torrent_name
 notified_torrents = load_notified_hashes()
 
 async def notify_finished(context):
-    global notified_torrents
     torrents = get_all_torrents()
     chat_id = config.NOTIFY_CHAT_ID
     for t in torrents:

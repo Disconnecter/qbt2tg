@@ -2,12 +2,12 @@ import requests
 import config
 
 qbittorrent_cookies = None
+session = requests.Session()
 
 def qb_login():
     global qbittorrent_cookies
     url = f"{config.QBITTORRENT_URL}/api/v2/auth/login"
     data = {'username': config.QBITTORRENT_USERNAME, 'password': config.QBITTORRENT_PASSWORD}
-    session = requests.Session()
     response = session.post(url, data=data)
     if response.ok and response.text == 'Ok.':
         qbittorrent_cookies = session.cookies
@@ -18,7 +18,6 @@ def qb_api(path, method='get', data=None, files=None):
     if qbittorrent_cookies is None:
         qb_login()
     url = f"{config.QBITTORRENT_URL}/api/v2/{path}"
-    session = requests.Session()
     session.cookies = qbittorrent_cookies
     try:
         if method == 'get':

@@ -32,9 +32,10 @@ async def status_torrents(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not loading:
         await update.message.reply_text("No active downloads.", reply_markup=get_main_reply_keyboard())
         return
-    for idx, t in enumerate(loading, 1):
+    msg_lines = []
+    for t in loading:
         name = sanitize_torrent_name(t['name'])
-        msg_lines = [f"{name} ({t['progress']*100:.1f}% | {t['state']})" for t in loading]
+        msg_lines.append(f"{name} ({t['progress']*100:.1f}% | {t['state']})")
     await update.message.reply_text('\n'.join(msg_lines), reply_markup=get_main_reply_keyboard())
 
 async def del_torrent(update: Update, context: ContextTypes.DEFAULT_TYPE, hash_):
