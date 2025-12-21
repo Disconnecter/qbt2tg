@@ -1,0 +1,2 @@
+target-version = "py38"
+select = ["F"]

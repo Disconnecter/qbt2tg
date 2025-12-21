@@ -61,6 +61,16 @@ def delete_torrent(hash_, delete_files=True):
     resp = qb_api('torrents/delete', method='post', data=data)
     return resp.ok if resp else False
 
+def pause_torrent(hash_):
+    data = {'hashes': hash_}
+    resp = qb_api('torrents/pause', method='post', data=data)
+    return resp.ok if resp else False
+
+def resume_torrent(hash_):
+    data = {'hashes': hash_}
+    resp = qb_api('torrents/resume', method='post', data=data)
+    return resp.ok if resp else False
+
 def get_torrent_by_hash(hash_):
     torrents = get_all_torrents()
     for t in torrents:
